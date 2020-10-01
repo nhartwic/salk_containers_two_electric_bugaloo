@@ -9,7 +9,7 @@ From:continuumio/miniconda3
     . /opt/conda/etc/profile.d/conda.sh
     conda activate
     conda env create -f assembly.yml -n myenv
-    # copy a script to activate myenv whenever the container starts up
+    # copy  a script to activate myenv whenever the container starts up
     cp conda.envscript .singularity.d/env/
     echo 'source /.singularity.d/env/conda.envscript' >> $SINGULARITY_ENVIRONMENT
     # dangerous wizardry below required to change from sh to bash for env sourcing
